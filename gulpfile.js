@@ -35,8 +35,8 @@ const paths = {
     dest: 'build/assets/'
   },
   fonts: {
-    src: 'src/fonts/**/*.*',
-    dest: 'build/assets/fonts/'
+    src: 'src/styles/fonts/**/*.*',
+    dest: 'build/assets/styles/fonts/'
   },
   styles: {
     src: 'src/styles/**/*.scss',
@@ -102,17 +102,17 @@ function styles() {
 // images
 function images() {
   return gulp.src(paths.images.src,) // {since: gulp.lastRun('images')})
-  // .pipe(imagemin([
-  //   imagemin.gifsicle({interlaced: true}),
-  //   imagemin.jpegtran({progressive: true}),
-  //   imagemin.optipng({optimizationLevel: 5}),
-  //   imagemin.svgo({
-  //       plugins: [
-  //           {removeViewBox: true},
-  //           {cleanupIDs: false}
-  //       ]
-  //   })
-  // ]))
+  .pipe(imagemin([
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.jpegtran({progressive: true}),
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.svgo({
+        plugins: [
+            {removeViewBox: true},
+            {cleanupIDs: false}
+        ]
+    })
+  ]))
   .pipe(gulp.dest(paths.images.dest));
 }
 
