@@ -23,7 +23,7 @@ const cheerio = require('gulp-cheerio');
 const spriteConfig = require('./sprite.config.js');
 
 // webpack
-const gulpWebpack = require('gulp-webpack'); // v2
+const gulpWebpack = require('webpack-stream'); // v4
 const webpack = require('webpack'); // v3
 const webpackConfig = require('./webpack.config.js');
 
