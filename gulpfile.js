@@ -24,7 +24,7 @@ const spriteConfig = require('./sprite.config.js');
 
 // webpack
 const gulpWebpack = require('webpack-stream'); // v4
-const webpack = require('webpack'); // v3
+const webpack = require('webpack'); // v4
 const webpackConfig = require('./webpack.config.js');
 
 const paths = {
