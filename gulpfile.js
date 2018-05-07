@@ -107,10 +107,10 @@ function images() {
     imagemin.jpegtran({progressive: true}),
     imagemin.optipng({optimizationLevel: 5}),
     imagemin.svgo({
-        plugins: [
-            {removeViewBox: true},
-            {cleanupIDs: false}
-        ]
+      plugins: [
+        {removeViewBox: true},
+        {cleanupIDs: false}
+      ]
     })
   ]))
   .pipe(gulp.dest(paths.images.dest));
@@ -119,32 +119,32 @@ function images() {
 // svg
 function sprites() {
   return gulp.src(paths.sprites.src)
-    .pipe(plumber({
-      errorHandler: notify.onError(function(error) {
-        return {
-          title: 'Sprites',
-          message: error.message
-        };
-      })
-    }))
-    .pipe(svgmin({
-      js2svg: {
-        pretty: true
-      }
-    }))
-    .pipe(cheerio({
-      run: function($) {
-        $('[fill]').removeAttr('fill');
-        $('[stroke]').removeAttr('stroke');
-        $('[style]').removeAttr('style');
-      },
-      parserOptions: {
-        xmlMode: true
-      }
-    }))
-    // .pipe(replace('&gt;', '>'))
-    .pipe(svgSprite(spriteConfig, svgSprite))
-    .pipe(gulp.dest(paths.sprites.dest));
+  .pipe(plumber({
+    errorHandler: notify.onError(function(error) {
+      return {
+        title: 'Sprites',
+        message: error.message
+      };
+    })
+  }))
+  .pipe(svgmin({
+    js2svg: {
+      pretty: true
+    }
+  }))
+  .pipe(cheerio({
+    run: function($) {
+      $('[fill]').removeAttr('fill');
+      $('[stroke]').removeAttr('stroke');
+      $('[style]').removeAttr('style');
+    },
+    parserOptions: {
+      xmlMode: true
+    }
+  }))
+  // .pipe(replace('&gt;', '>'))
+  .pipe(svgSprite(spriteConfig, svgSprite))
+  .pipe(gulp.dest(paths.sprites.dest));
 }
 
 // clean
