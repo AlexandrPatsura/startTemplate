@@ -11,7 +11,7 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.24.4",
-    "del": "^2.24.4",
+    "del": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cheerio": "^0.6.3",
@@ -26,8 +26,8 @@
     "gulp-svgmin": "^1.2.4",
     "node-normalize-scss": "^8.0.0",
     "uglifyjs-webpack-plugin": "^1.2.5",
-    "webpack": "^4.9.1",
-    "webpack-cli": "^2.1.4",
+    "webpack": "^4.10.2",
+    "webpack-cli": "^2.1.5",
     "webpack-stream": "^4.0.3"
   },
   "dependencies": {
