@@ -1,4 +1,35 @@
+// @import 'normalize';
+@import 'common/_variables';
+@import 'common/_fonts';
+@import 'common/_smartgrid';
+@import 'common/_header';
+
+@include reset;
+
+html,
+body {
+  font-size: $main-fz;
+  font-family: $main-font;
+}
+
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
+  @include wrapper;
+  width: 100%;
+}
+
+.row {
+  @include row-flex;
+}
+
+ul {
+  font-size: 0rem;
+}
+
+li, a, p {
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
 }
