@@ -1,4 +1,5 @@
 // images
+
 module.exports = function () {
   $.gulp.task('images', function () {
     return $.gulp.src($.paths.images.src) // {since: $.glp.gulp.lastRun('images')})
