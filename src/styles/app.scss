@@ -12,6 +12,10 @@ body {
   font-family: $main-font;
 }
 
+.debug {
+  @include debug(#ccc, none);
+}
+
 .container {
   @include wrapper;
   width: 100%;
@@ -19,6 +23,11 @@ body {
 
 .row {
   @include row-flex;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, li {
+  margin: 0;
+  padding: 0;
 }
 
 ul {

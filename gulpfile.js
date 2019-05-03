@@ -18,7 +18,7 @@ global.$ = {
       dest: 'build/assets/fonts/'
     },
     styles: {
-      src: 'src/styles/**/*.scss',
+      src: 'src/styles/app.scss',
       dest: 'build/assets/styles/'
     },
     images: {
@@ -30,7 +30,7 @@ global.$ = {
       dest: 'build/assets/images/sprites/'
     },
     scripts: {
-      src: 'src/scripts/**/*.js',
+      src: 'src/scripts/app.js',
       dest: 'build/assets/scripts/'
     }
   }
