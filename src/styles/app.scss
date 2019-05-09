@@ -1,7 +1,7 @@
-@import 'normalize';
-@import 'common/variables';
-@import 'common/fonts';
-@import 'common/smartgrid';
+@import "normalize";
+@import "common/variables";
+@import "common/fonts";
+@import "common/smartgrid";
 // @import 'common/header';
 
 // @include reset;
@@ -25,7 +25,15 @@ body {
   @include row-flex;
 }
 
-h1, h2, h3, h4, h5, h6, p, a, li {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li {
   margin: 0;
   padding: 0;
 }
@@ -38,7 +46,9 @@ li {
   list-style-type: none;
 }
 
-li, a, p {
+li,
+a,
+p {
   font-size: 1.6rem;
 }
 
